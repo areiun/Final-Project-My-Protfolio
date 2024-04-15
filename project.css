@@ -1,0 +1,221 @@
+/* Importing Google font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+  
+  .navbar .logo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 2.1rem;
+    text-decoration: none;
+  }
+  
+  .navbar .logo span {
+    color: #C06B3E;
+  }
+  
+  .navbar .menu-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+  
+  .navbar a:hover {
+    color: #C06B3E;
+  }
+  
+  
+  #close-menu-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #hamburger-btn {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      padding: 10px;
+    }
+  
+    header.show-mobile-menu::before {
+      content: "";
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(5px);
+    }
+  
+    .navbar .logo {
+      font-size: 1.7rem;
+    }
+  
+      
+    #hamburger-btn, #close-menu-btn {
+      display: block;
+    }
+  
+    .navbar .menu-links {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100vh;
+      background: #fff;
+      flex-direction: column;
+      padding: 70px 40px 0;
+      transition: left 0.2s ease;
+    }
+  
+    header.show-mobile-menu .navbar .menu-links {
+      left: 0;
+    }
+  
+    .navbar a {
+      color: #000;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-image: url("imgs/bg.jpg");
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 150px auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-list .card-item {
+    background: #655446 ;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+
+.card-list .card-item:hover {
+    border: 2px solid #a99a86;
+}
+
+.card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-list span {
+    display: inline-block;
+    background: #F7DFF5;
+    margin-top: 32px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #EADDCA;
+
+}
+
+.card-list .Project1 {
+    background-color: #EADDCA; 
+    color: #5C4033;
+}   
+
+.card-list .Project2 {
+    background-color: #EADDCA;
+    color: #5C4033;
+}
+
+.card-list .Project3 {
+    background-color: #EADDCA; 
+    color: #5C4033;
+}
+
+.card-item h3 {
+    color: #F2D2BD;
+    font-size: 1.438rem;
+    margin-top: 28px;
+    font-weight: 600;
+}
+
+.card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item:hover .arrow  {
+    background: #000;
+    color: #fff; 
+}
+
+@media (max-width: 1200px) {
+    .card-list .card-item {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .card-list {
+        margin: 0 auto;
+    }
+}
